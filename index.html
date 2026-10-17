@@ -19,12 +19,17 @@
 	</script>
 
 	<script type="module">
-		import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.186.0/examples/jsm/loaders/GLTFLoader.js';
+		import {GLTFLoader} from 'https://cdn.jsdelivr.net/npm/three@0.186.0/examples/jsm/loaders/GLTFLoader.js';
 		window.ThreeGLTFLoader = GLTFLoader;
 	</script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
 </head>
 
 <body ontouchstart="">
+	<script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL"
+		crossorigin="anonymous"></script>
 
 	<div id="ar-container"></div>
 
@@ -40,11 +45,35 @@
 		</div>
 	</div>
 
+	<dialog class="dialog" id="HISTORIA" data-bs-theme="dark">
+		<div class="dialog-header">
+			<h1 class="dialog-title">Dark dialog title</h1>
+			<button type="button" class="btn-close" data-bs-dismiss="dialog" aria-label="Close"></button>
+		</div>
+		<div class="dialog-body">
+			<p>Buchanan’s es una marca de whisky escocés fundada en 1884 por James Buchanan, 
+				reconocida por su tradición, calidad y presencia en el mercado latinoamericano, especialmente en Colombia. 
+				Se elabora a partir de una mezcla de whiskies escoceses y se caracteriza por sus notas de miel, frutas, vainilla y madera, 
+				con un sabor suave y un aroma distintivo. Entre sus referencias más conocidas se encuentran Buchanan’s Deluxe 12 años, 
+				Buchanan’s Master y Buchanan’s Red Seal. Su imagen de marca suele asociarse con la elegancia, la celebración y el consumo social, 
+				por lo que es habitual encontrarlo en reuniones, fiestas y ocasiones especiales.</p>
+		</div>
+		<div class="dialog-footer">
+			<button type="button" class="btn-solid theme-secondary" data-bs-dismiss="dialog">Close</button>
+			<button type="button" class="btn-solid theme-primary">Save changes</button>
+		</div>
+	</dialog>
+
+
+
+
+
+
 	<script type="module">
 
 		import * as THREE from './js/three.module.js';
-		import { APP } from './js/app.js';
-		import { MindARController } from './js/mindar/mindar_controller.js';
+		import {APP} from './js/app.js';
+		import {MindARController} from './js/mindar/mindar_controller.js';
 
 		window.THREE = THREE; // Used by APP Scripts.
 
@@ -92,7 +121,7 @@
 					);
 				});
 
-				player = new APP.Player({ alpha: true });
+				player = new APP.Player({alpha: true});
 				await player.load(JSON.parse(text));
 				player.setSize(window.innerWidth, window.innerHeight);
 				player.play();
@@ -162,6 +191,24 @@
 			setProgress(0, 'Error al cargar');
 			startButton.textContent = 'Reintentar';
 		});
+
+	</script>
+	<script>
+		function showInfo() {	
+			let HISTORIA = document.getElementById('HISTORIA')
+			let dialog = bootstrap.getOrCreateInstance(HISTORIA)
+		}
+
+		function showInfo2() {	
+			let HISTORIA = document.getElementById('HISTORIA')
+			let dialog = bootstrap.getOrCreateInstance(HISTORIA)
+		}
+
+		function showInfo3() {	
+			let HISTORIA = document.getElementById('HISTORIA')
+			let dialog = bootstrap.getOrCreateInstance(HISTORIA)
+		}
+
 
 	</script>
 </body>
