@@ -58,11 +58,34 @@
 				Buchanan’s Master y Buchanan’s Red Seal. Su imagen de marca suele asociarse con la elegancia, la celebración y el consumo social, 
 				por lo que es habitual encontrarlo en reuniones, fiestas y ocasiones especiales.</p>
 		</div>
-		<div class="dialog-footer">
-			<button type="button" class="btn-solid theme-secondary" data-bs-dismiss="dialog">Close</button>
-			<button type="button" class="btn-solid theme-primary">Save changes</button>
+	</dialog>
+
+	<dialog class="dialog" id="INFO" data-bs-theme="dark">
+		<div class="dialog-header">
+			<h1 class="dialog-title">Dark dialog title</h1>
+			<button type="button" class="btn-close" data-bs-dismiss="dialog" aria-label="Close"></button>
+		</div>
+		<div class="dialog-body">
+			<p>Buchanan’s cuenta con diferentes variedades de whisky, entre las que destacan Buchanan’s Deluxe 12 años, 
+				Buchanan’s Master y Buchanan’s Red Seal. Cada una presenta características particulares en su aroma, sabor y proceso de elaboración. 
+				La marca también se ha vinculado con la celebración, la amistad y la conexión cultural, promoviendo experiencias que reúnen a las 
+				personas alrededor de momentos especiales.</p>
 		</div>
 	</dialog>
+
+		<dialog class="dialog" id="INGREDIENTES" data-bs-theme="dark">
+		<div class="dialog-header">
+			<h1 class="dialog-title">Dark dialog title</h1>
+			<button type="button" class="btn-close" data-bs-dismiss="dialog" aria-label="Close"></button>
+		</div>
+		<div class="dialog-body">
+			<p>Buchanan’s se elabora a partir de una combinación de whiskies escoceses de malta y de grano,
+				 cuyos ingredientes principales son cereales, agua y levadura. Estos elementos pasan por procesos de fermentación y 
+				 destilación, y posteriormente el whisky madura en barricas de roble, donde desarrolla su aroma, color y sabor 
+				 característicos, con notas que pueden incluir vainilla, frutas, caramelo y especias, según la variedad.</p>
+		</div>
+	</dialog>
+
 
 
 
@@ -200,13 +223,13 @@
 		}
 
 		function showInfo2() {	
-			let HISTORIA = document.getElementById('HISTORIA')
-			let dialog = bootstrap.getOrCreateInstance(HISTORIA)
+			let INFO = document.getElementById('INFO')
+			let dialog = bootstrap.getOrCreateInstance(INFO)
 		}
 
 		function showInfo3() {	
-			let HISTORIA = document.getElementById('HISTORIA')
-			let dialog = bootstrap.getOrCreateInstance(HISTORIA)
+			let INGREDIENTES = document.getElementById('INGREDIENTES')
+			let dialog = bootstrap.getOrCreateInstance(INGREDIENTES)
 		}
 
 
